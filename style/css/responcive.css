@@ -1,0 +1,127 @@
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+
+
+@media only screen and (min-width: 1200px) {
+	.container {
+		max-width: 1170px;
+	}
+}
+
+/* Medium Device = 1200px */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.login__form {
+		position: relative;
+		padding-left: 32px;
+	}
+	.login__social__links ul li a {
+		width: 380px;
+	}
+
+	.login__form {
+		position: relative;
+		padding-left: 32px;
+	}
+	.login__social__links ul li a {
+		width: 380px;
+	}
+	.blog__item__text {
+		padding: 0 50px;
+	}
+}
+
+/* Tablet Device = 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+	.header {
+		position: relative;
+	}
+	.header .container {
+		position: relative;
+	}
+	.header__right {
+		position: absolute;
+		right: 120px;
+		top: -42px;
+		padding: 0;
+	}
+	.header__menu {
+		display: none;
+	}
+	.product__sidebar {
+		padding-top: 50px;
+	}
+	.footer__logo {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.footer__nav {
+		margin-bottom: 15px;
+	}
+	.footer__copyright__text {
+		text-align: center;
+	}
+
+}
+
+/* Wide Mobile = 480px */
+
+@media only screen and (max-width: 767px) {
+	.hero {
+		overflow: hidden;
+	}
+	.header {
+		position: relative;
+	}
+	.header .container {
+		position: relative;
+	}
+	.header__right {
+		position: absolute;
+		right: 120px;
+		top: -42px;
+		padding: 0;
+	}
+	.header__menu {
+		display: none;
+	}
+	
+	.footer__logo {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.footer__nav {
+		margin-bottom: 15px;
+	}
+	.footer__copyright__text {
+		text-align: center;
+	}
+S
+	.btn__all {
+		text-align: left;
+	}
+	.product__page__title .section-title {
+		margin-bottom: 30px;
+	}
+	.product__page__title .product__page__filter {
+		text-align: left;
+	}
+
+
+}
+
+/* Small Device = 320px */
+
+@media only screen and (max-width: 479px) {
+
+	.footer__nav ul li {
+		margin-right: 10px;
+	}
+    .header__right a {
+		margin-right: 10px;
+	}
+
+
+}
