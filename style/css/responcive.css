@@ -210,12 +210,17 @@ S
 
 	#row-imgs{
 		display: flex;
-		margin-left: 6rem;
 		margin-top: 2rem;
 	}
 	.product__item{
 		margin-top: 5.7rem;
+		flex-wrap: nowrap;
+
 	}
+	.row {
+		margin: 0 auto !important;
+	}
+
 /* 
 	#main-card{
 		justify-content: center !important;
