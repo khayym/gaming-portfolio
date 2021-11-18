@@ -43,7 +43,7 @@ function draw(){
     navbarRaund.innerHTML = `ROUND ${roundScore}`;
     drawScoreboard.innerHTML = `${drawScore}`;
     wdlInfoBoard.innerHTML = `DRAW`;
-    document.getElementById('w-d-l-InformationBoard').style.color="rgba(17, 17, 17, 0.377)";
+    document.getElementById('w-d-l-InformationBoard').style.color="#fff";
 }
 
 function lose(){
