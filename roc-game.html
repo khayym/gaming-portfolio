@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <link rel="stylesheet" href="./style/css/responcive.css">
+    <link rel="stylesheet" href="./style/css/style-rsp.css">
+    <link rel="stylesheet" href="./style/css/style.css" type="text/css">
+</head>
+<body>
+    
+
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="header__logo">
+                            <a href="./index.html">
+                                <img src="img/logo-3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="header__nav">
+                            <nav class="header__menu mobile-menu">
+                                <ul>
+                                    <li class="active"><a href="./index.html">Homepage</a></li>
+                                    <li><a href="#">Categories <span class="arrow_carrot-down"></span></a>
+                                        <ul class="dropdown">
+                                            <li><a href="#" disabled>Categories</a></li>
+                                            <li><a href="#">Sign Up</a></li>
+                                            <li><a href="#">Login</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">My Blog</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="header__right">
+                            <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                            <a href="#"><span class="icon_profile"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+
+    <!-- Anime Section Begin -->
+    <div class="anime-details spad">
+        <div class="container">
+                <div class="anime__details__content">
+
+                    <!-- header -->
+            <div class="header" id="header">
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">rock paper scissors</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- navbar results -->
+            <div class="col mt-5" >
+                <div class="col h2 text-center ">
+                    <p class="navbar-res-round ">ROUND 0</p>
+                </div>
+            </div>
+
+            <!-- main section -->
+
+            <div class="col text-center mt-5" id="game-score-table">
+                <!-- game win or draw results -->
+                <div class="row ">
+                    <div class="col-4">
+                        <p id="header-game-result-info">WIN</p>
+                        <p id="footer-game-result-info" class="userScoreboard">0</p>
+                    </div>
+                    <div class="col-4">
+                        <p  id="header-game-result-info">DRAW</p>
+                        <p id="footer-game-result-info" class="drawScoreboard">0</p>
+                    </div>
+                    <div class="col-4">
+                        <p id="header-game-result-info">WIN</p>
+                        <p id="footer-game-result-info" class="aiScoreboard">0</p>
+                    </div>
+                </div>
+
+                <!-- game section -->
+                <div class="row justify-content-between"  id="main-content-section">
+
+                    <div class="card col-4 justify-content-center align-items-center" id="main-card">
+                        
+                        <img src="./img/games-are/r-p-s/r.png"  id="userGameIMG" class="card-img-top mt-5" alt="...">
+                        <div class="card-body mt-5" id="game-buttons-card">
+        
+                            <button class="btn me-3" id="game-buttons-rock"  onclick="clickButton('r')"><i class="far fa-hand-rock "></i></button>
+                            <button class="btn me-3" id="game-buttons-scissors" onclick="clickButton('s')" ><i class="far fa-hand-scissors" ></i></button>
+                            <button class="btn" id="game-buttons-paper"  onclick="clickButton('p')"><i class="far fa-hand-paper"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="card col-3 " id="main-info-section">
+                        <div class="card-body">
+                        <p class="mt-5" id="w-d-l-InformationBoard">LETS BEGIN</p>
+                        <button class="btn bg-dark text-white mt-5" id="restart-btn" onClick="refreshPage()"  >Restart</button>
+                        </div>
+                    </div>
+
+                    <div class="card col-4 justify-content-center align-items-center" id="ai-card">
+                        <img src="./img/games-are/r-p-s/r.png" id="aiGameIMG" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            
+            
+                </div>
+                    
+
+            
+                <div class="row">
+                        <div class="col-lg-8 col-md-8">
+                            <div class="anime__details__review mt-2">
+                                <div class="section-title">
+                                    <h5>Reviews</h5>
+                                </div>
+                                <div class="anime__review__item mt-3">
+                                    <div class="anime__review__item__pic">
+                                        <img src="https://ca.slack-edge.com/T02JE9BKJ2V-U02HM0S6MJB-gd8cd877038e-72" alt="">
+                                    </div>
+                                    <div class="anime__review__item__text">
+                                        <h6>Elsad Agazade - <span>1 Hour ago</span></h6>
+                                        <p>Cox gozle proyetdi . Bəyəndim ❤</p>
+                                    </div>
+                                </div>
+                                <div class="anime__review__item">
+                                    <div class="anime__review__item__pic">
+                                        <img src="https://ca.slack-edge.com/T02JE9BKJ2V-U02HZ6NQJCF-5c968f884bd2-72" alt="">
+                                    </div>
+                                    <div class="anime__review__item__text">
+                                        <h6>Emil - <span>5 Hour ago</span></h6>
+                                        <p>Responsiv dizaynda bir iki çatışmazlıq var ümid edirəm bugları aradan qaldırarsan</p>
+                                    </div>
+                                </div>
+                                <div class="anime__review__item">
+                                    <div class="anime__review__item__pic">
+                                        <img src="https://ca.slack-edge.com/T02JE9BKJ2V-U02J1MVQCQK-a5fa783746f6-72" alt="">
+                                    </div>
+                                    <div class="anime__review__item__text">
+                                        <h6>Ferhad Kerimli - <span>20 Hour ago</span></h6>
+                                        <p>Qəşəy Xəyyam &#128077;&#127995;</p>
+                                    </div>
+                                </div>
+                                <div class="anime__review__item">
+                                    <div class="anime__review__item__pic">
+                                        <img src="https://ca.slack-edge.com/T02JE9BKJ2V-U02J1LWQBB4-31b8bc02ebf0-72" alt="">
+                                    </div>
+                                    <div class="anime__review__item__text">
+                                        <h6>Sərxan Rəhimli - <span>1 Hour ago</span></h6>
+                                        <p>Əjdaha, cool 🐉🆒</p>
+                                    </div>
+                                </div>
+                                <div class="anime__review__item">
+                                    <div class="anime__review__item__pic">
+                                        <img src="https://ca.slack-edge.com/T02JE9BKJ2V-U02HYMCVBD3-fcdbde59f476-72" alt="">
+                                    </div>
+                                    <div class="anime__review__item__text">
+                                        <h6>İsgəndərli Murad - <span>5 Hour ago</span></h6>
+                                        <p>Oyun marağlı alınıb</p>
+                                    </div>
+                                </div>
+                                <div class="anime__review__item">
+                                    <div class="anime__review__item__pic">
+                                        <img src="https://ca.slack-edge.com/T02JE9BKJ2V-U02JRB2GJ8Y-908f6d49030a-512" alt="">
+                                    </div>
+                                    <div class="anime__review__item__text">
+                                        <h6>Xəyyam Kərimov - <span>20 Hour ago</span></h6>
+                                        <p>Çox bərbad alınıb 😠</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="anime__details__form">
+                                <div class="section-title">
+                                    <h5>Your Comment</h5>
+                                </div>
+                                <form action="#">
+                                    <textarea placeholder="Your Comment"></textarea>
+                                    <button type="submit"><i class="fa fa-location-arrow"></i> Review</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="anime__details__sidebar">
+                                <div class="section-title">
+                                    <h5>you might like...</h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="">
+                                    <div class="ep">11.18.21</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 567</div>
+                                    <h5><a href="#">Rock paper scissors HİSTORY </a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-2.jpg">
+                                    <div class="ep">03.10.21</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 82</div>
+                                    <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-3.jpg">
+                                    <div class="ep">18.03.18</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 1344</div>
+                                    <h5><a href="#">Sword art online alicization war of underworld</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="img/sidebar/tv-4.jpg">
+                                    <div class="ep">29.01.21</div>
+                                    <div class="view"><i class="fa fa-eye"></i> 287</div>
+                                    <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+        <!-- Anime Section End -->
+
+     
+        
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="page-up">
+        <a href="#" id="scrollToTopButton"><span><i class="bi bi-arrow-up-short"></i></span></a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="footer__logo">
+                    <a href="./index.html"><img src="img/logo-3.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="footer__nav">
+                    <ul>
+                        <li class="active"><a href="./index.html">Homepage</a></li>
+                        <li><a href="./categories.html">Categories</a></li>
+                        <li><a href="./blog.html">My Blog</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+                   <a href="https://github.com/khayym" target="_blank">Khayyam Karimov</a>
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Footer Section End -->
+
+
+
+         <!--Scripts  -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+        <script src="./js/app.js"></script>
+
+</body>
+</html>

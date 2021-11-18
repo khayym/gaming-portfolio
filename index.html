@@ -8,6 +8,8 @@
 
     <!-- Links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style/css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="./style/css/responcive.css">
     <link rel="stylesheet" href="./style/css/style.css" type="text/css">
 </head>
@@ -21,7 +23,7 @@
                     <div class="col-lg-2">
                         <div class="header__logo">
                             <a href="./index.html">
-                                <img src="img/logo.png" alt="">
+                                <img src="img/logo-3.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -30,14 +32,14 @@
                             <nav class="header__menu mobile-menu">
                                 <ul>
                                     <li class="active"><a href="./index.html">Homepage</a></li>
-                                    <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                                    <li><a href="#">Categories <span class="arrow_carrot-down"></span></a>
                                         <ul class="dropdown">
-                                            <li><a href="./categories.html" disabled>Categories</a></li>
-                                            <li><a href="./signup.html">Sign Up</a></li>
-                                            <li><a href="./login.html">Login</a></li>
+                                            <li><a href="#" disabled>Categories</a></li>
+                                            <li><a href="#">Sign Up</a></li>
+                                            <li><a href="#">Login</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="./blog.html">My Blog</a></li>
+                                    <li><a href="#">My Blog</a></li>
                                     <li><a href="#">Contacts</a></li>
                                 </ul>
                             </nav>
@@ -56,6 +58,8 @@
         <!-- Header End -->
 
 
+
+
     <!-- Product Section Begin -->
     <section class="product spad">
         <div class="container">
@@ -69,11 +73,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="row-imgs">
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic " set-bg >
-                                        <img src="./img/trending/trend-1.jpg" alt="">
+                                        <img src="./img/games/rock-p-s.png" alt="">
                                         <div class="creatingDate">11.07.21</div>
                                     </div>
                                     <div class="product__item__text">
@@ -82,14 +86,15 @@
                                             <li>HTML</li>
                                             <li>CSS</li>
                                         </ul>
-                                        <h5><a href="#">Rock paper scissors</a></h5>
+                                        <h5><a href="#">Rock  paper scissors</a></h5>
+                                            <a href="./roc-game.html" class="btn btn-primary mt-2 w-25" id="play-button">PLAY</a> 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="img/trending/trend-2.jpg">
-                                        <img src="./img/trending/trend-2.jpg" alt="" >
+                                        <img src="./img/games/p-s4.png" alt="" >
                                         <div class="creatingDate">soon..</div>
                                   </div>
                                     <div class="product__item__text">
@@ -97,14 +102,15 @@
                                             <li>Hidden</li>
                                             <li>Hidden</li>
                                         </ul>
-                                        <h5><a href="#">Drive car in city</a></h5>
+                                        <h5><a href="#">Racing in city</a></h5>
+                                        <a href="#" id="play-button" class="btn btn-primary mt-2 w-25">PLAY</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="img/trending/trend-3.jpg">
-                                        <img src="./img/trending/trend-3.jpg" alt="">
+                                        <img src="./img/games/comingsoon.png" alt="">
                                         <div class="creatingDate">soon..</div>
                                     </div>
                                     <div class="product__item__text">
@@ -113,6 +119,7 @@
                                             <li>Hidden</li>
                                         </ul>
                                         <h5><a href="#"> announced soon ...</a></h5>
+                                        <a href="#" id="play-button" class="btn btn-primary mt-2 w-25" >PLAY</a>
                                     </div>
                                 </div>
                             </div>
@@ -128,13 +135,13 @@
 <!-- Footer Section Begin -->
 <footer class="footer">
     <div class="page-up">
-        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        <a href="#" id="scrollToTopButton"><span><i class="bi bi-arrow-up-short"></i></span></a>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    <a href="./index.html"><img src="img/logo-3.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">

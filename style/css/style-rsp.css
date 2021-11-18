@@ -1,0 +1,148 @@
+
+
+
+#header li a{
+    font-size: 2rem;
+    color: #fff
+}
+
+
+.navbar-res-round{
+    font-weight: bold;
+    color: #e53637 !important;
+    font-size: 2rem;
+}
+
+#header-game-result-info{
+    color:#b5b5b5;
+    font-size:1.2rem;
+    font-weight: normal;
+}
+
+#footer-game-result-info{
+    color: #fff;
+    font-size:1.8rem
+}
+#userGameIMG, #aiGameIMG{
+  width: 20rem;
+  height: 9rem;
+}
+
+
+#main-card, #ai-card{
+    backdrop-filter: blur(9px) saturate(200%);
+    -webkit-backdrop-filter: blur(9px) saturate(200%);
+    background-color: rgba(21, 23, 71, 0.86);
+    border-radius: 12px;
+    
+}
+
+#main-content-section div{
+    border: 0px solid black;
+}
+
+#game-buttons-rock,
+#game-buttons-paper,
+#game-buttons-scissors{
+    border-radius: 100px;
+    width: 4rem;
+    height: 4rem;
+    background-color: #322469 !important;
+}
+
+
+#game-buttons-scissors:hover{
+    background-color: #12005a !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#game-buttons-paper:hover{
+    background-color: #12005a !important; 
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+#game-buttons-rock:hover{
+    background-color: #12005a !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ 
+}
+
+#main-content-section i{
+color: #fff;
+font-size: 2rem;   
+}
+
+#main-info-section{
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.87);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#main-info-section p{
+    border-bottom:1px solid rgba(109, 105, 105, 0.185);;
+    border-top: solid 1px rgba(109, 105, 105, 0.185);
+    font-size: 2rem !important;
+}
+#restart-btn{
+  width: 10rem;
+  height: 3rem;
+}
+
+#restart-btn:hover{
+    background-color: rgb(109, 105, 105) !important;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#main-info-section p{
+    
+    font-weight: bolder;
+    color: rgba(14, 14, 14, 0.377);
+    font-size: 3rem;
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+
+  
+}
+
+@keyframes neon2 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+        0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+        0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    }
+  }
+  
+
+#ai-card img{
+    -webkit-transform: scaleX(-1) !important;
+    transform: scaleX(-1) !important;
+    margin-top: 7rem !important;
+}
+
+#ai-card ,#main-card{
+  
+    border: 1px solid rgb(109, 105, 105) !important;
+    height: 28rem;
+    border-radius: 10px;
+}
+
+
+
+#main-card img{
+  height: 8rem !important;
+    margin-top: 7rem !important;
+}
+
+#game-buttons-card{
+    margin-top: 6.8rem!important ;
+}
+
