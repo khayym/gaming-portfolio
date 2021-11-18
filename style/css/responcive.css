@@ -6,6 +6,10 @@
 	.container {
 		max-width: 1170px;
 	}
+
+	#game-buttons-card-2{
+		display: none;
+	}
 }
 
 /* Medium Device = 1200px */
@@ -38,6 +42,11 @@
 		justify-content: right;
 
 	}
+
+	#game-buttons-card-2{
+		display: none;
+	}
+
 }
 
 /* Tablet Device = 768px */
@@ -77,6 +86,79 @@
 		text-align: center;
 	}
 
+	
+	#main-card{
+		justify-content: center !important;
+		align-items: center !important;
+	} 
+	#main-card,#ai-card{
+	height:12rem !important;
+	}
+
+	#main-card img {
+		height: auto !important;
+		align-items: center;
+		margin-top: 0 !important;
+	}
+
+	#ai-card{
+		justify-content: center !important;
+		align-items: center !important;
+	}
+
+	#ai-card img{
+		height: auto !important;
+		align-items: center;
+		margin-top: 0 !important;
+	}
+
+	#game-buttons-card{
+		display: none !important;
+	}
+
+	#main-info-section{
+		width: 12rem !important;
+	}
+	#game-buttons-card{
+		display: flex;
+		margin-top: 0rem !important;
+		align-items: center;
+		
+	}
+
+	#main-content-commnet{
+		margin-top: 10rem !important;
+	}
+
+	#game-buttons-card-2{
+		margin-top: 0px !important;
+
+	}
+	
+#game-buttons-rock,
+#game-buttons-paper,
+#game-buttons-scissors{
+    border-radius: 100px;
+    width: 3.6rem !important;
+    height: 3.6rem !important;
+    background-color: #322469 !important;
+	margin-left: 0.8rem!important;
+}
+ #userGameIMG, #aiGameIMG{
+	width: 15rem !important;
+	height: 5rem !important;
+  } 
+
+
+  .card-body{
+	  flex: 0 0 auto;
+	  padding: 0px !important;
+  }
+
+  .card-body button{
+	  width: 6rem !important;
+	  margin-bottom: 0.2rem;
+  }
 }
 
 /* Wide Mobile = 480px */
@@ -134,6 +216,70 @@ S
 	.product__item{
 		margin-top: 5.7rem;
 	}
+/* 
+	#main-card{
+		justify-content: center !important;
+		align-items: center !important;
+	} */
+	#main-card,#ai-card{
+	height:15rem !important;
+	}
+
+	#main-card img {
+		height: auto !important;
+		align-items: center;
+		margin-top: 5rem !important;
+	}
+
+	#ai-card{
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	#ai-card img{
+		align-items: center;
+		margin-top: 5rem !important;
+		height: auto !important;
+	}
+
+	#game-buttons-card{
+		display: none !important;
+	}
+	#main-info-section{
+		display: none;
+	}
+	#game-buttons-card{
+		display: flex;
+		margin-top: 0rem !important;
+		align-items: center;
+		
+	}
+
+	#main-content-commnet{
+		margin-top: 10rem !important;
+	}
+
+	#game-buttons-card-2{
+		margin-top: 0px !important;
+
+	}
+	
+#game-buttons-rock,
+#game-buttons-paper,
+#game-buttons-scissors{
+    border-radius: 100px;
+    width: 3.6rem !important;
+    height: 3.6rem !important;
+    background-color: #322469 !important;
+	margin-left: 0.8rem!important;
+}
+ #userGameIMG, #aiGameIMG{
+	width: 15rem !important;
+	height: 5rem !important;
+  } 
+
+
+
 }
 
 /* Small Device = 320px */

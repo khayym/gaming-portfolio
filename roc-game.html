@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./style/css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
-    <link rel="stylesheet" href="./style/css/responcive.css">
     <link rel="stylesheet" href="./style/css/style-rsp.css">
     <link rel="stylesheet" href="./style/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./style/css/responcive.css">
 </head>
 <body>
     
@@ -104,7 +104,7 @@
                 <!-- game section -->
                 <div class="row justify-content-between"  id="main-content-section">
 
-                    <div class="card col-4 justify-content-center align-items-center" id="main-card">
+                    <div class="card col-4 col-sm-6 col-md-4  col-lg-4justify-content-center align-items-center" id="main-card">
                         
                         <img src="./img/games-are/r-p-s/r.png"  id="userGameIMG" class="card-img-top mt-5" alt="...">
                         <div class="card-body mt-5" id="game-buttons-card">
@@ -113,20 +113,28 @@
                             <button class="btn me-3" id="game-buttons-scissors" onclick="clickButton('s')" ><i class="far fa-hand-scissors" ></i></button>
                             <button class="btn" id="game-buttons-paper"  onclick="clickButton('p')"><i class="far fa-hand-paper"></i></button>
                         </div>
+
                     </div>
 
-                    <div class="card col-3 " id="main-info-section">
+                    <div class="card col-3" id="main-info-section">
                         <div class="card-body">
                         <p class="mt-5" id="w-d-l-InformationBoard">LETS BEGIN</p>
                         <button class="btn bg-dark text-white mt-5" id="restart-btn" onClick="refreshPage()"  >Restart</button>
                         </div>
                     </div>
 
-                    <div class="card col-4 justify-content-center align-items-center" id="ai-card">
+                    <div class="card col-4 col-sm-6 col-md-4 justify-content-center align-items-center" id="ai-card">
                         <img src="./img/games-are/r-p-s/r.png" id="aiGameIMG" class="card-img-top" alt="...">
                         <div class="card-body">
                             
                         </div>
+                    </div>
+
+                    <div class="card-body mt-5" id="game-buttons-card-2">
+        
+                        <button class="btn me-3" id="game-buttons-rock"  onclick="clickButton('r')"><i class="far fa-hand-rock "></i></button>
+                        <button class="btn me-3" id="game-buttons-scissors" onclick="clickButton('s')" ><i class="far fa-hand-scissors" ></i></button>
+                        <button class="btn" id="game-buttons-paper"  onclick="clickButton('p')"><i class="far fa-hand-paper"></i></button>
                     </div>
 
                 </div>
@@ -138,7 +146,7 @@
                     
 
             
-                <div class="row">
+                <div class="row" id="main-content-commnet">
                         <div class="col-lg-8 col-md-8">
                             <div class="anime__details__review mt-2">
                                 <div class="section-title">
