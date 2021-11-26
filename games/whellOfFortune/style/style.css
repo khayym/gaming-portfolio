@@ -1,0 +1,15 @@
+.card{
+    height: 5rem;
+    align-items:center;
+    justify-content:center;
+}
+
+#card-area {
+    justify-content:center;
+    align-items: center;
+}
+
+h4{
+    font-size: 3.5rem;
+}
+
