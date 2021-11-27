@@ -13,3 +13,20 @@ h4{
     font-size: 3.5rem;
 }
 
+.btn{
+    margin: .2rem!important;
+    width: 5.65rem;
+    height: 4.4rem !important;
+    border-radius:10px!important;
+
+}
+
+
+.btn-group>.btn-group:not(:first-child), .btn-group>.btn:not(:first-child){
+    margin-left: 0;
+}
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 0  0 auto;
+}
