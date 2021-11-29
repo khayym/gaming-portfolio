@@ -20,14 +20,18 @@ h4{
     border-radius:10px!important;
 
 }
-#controllerArea{
-    display: none !important;
-}
 
-/* #letterletterChoiseArea{
+#card-main{
+    margin-top: 7rem;
+}
+/* #controllerArea{
     display: none !important;
 } */
 
+/* #letterletterChoiseArea{
+    display: none !important;
+}
+ */
 
 .btn-group>.btn-group:not(:first-child), .btn-group>.btn:not(:first-child){
     margin-left: 0;
