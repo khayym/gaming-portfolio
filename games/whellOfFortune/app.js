@@ -1,224 +1,188 @@
+ let choisenWord = "";
+ let splitChoisenWord = [];
+ let lengthOfChoisenWord = 0;
+ let mainVariable = [];
+ let wrongChoisenWord = [];
+ let choisenTitle = [];
+ let randomize = 0;
+
+ let gameEarndMoney = 0;
+ let countOfLose = 0;
+ let gameChanse = 3;
+
+
 class DomManipulator {
   static cardArea = document.querySelector('#card-area');
   static hederBoxInfo = document.querySelector('#info-box');
-  static letterChoizeArea = document.querySelector('#letterChoizeArea');
+  static letterChoiseArea = document.querySelector('#letterChoiseArea');
   static buttons = document.querySelectorAll('.btn');
-  static gamePoint = document.querySelector('#gameHurtCount');
+  static gameChanse = document.querySelector('#gameChanse');
+  static wheel = document.querySelector('.wheel');
+  static startButton = document.querySelector('.button');
+  static display = document.querySelector('.display');
+  static gameMoney = document.querySelector('#gameMoney');
  }
 
 
- let wordsList = ["jerome", "neena", "darion", "lou", "greg", "jordan",
- "jasmine", "stephen", "jacob", "adam", "rui", "luis"];
 
- let chosenWord = "";
- let lettersInChosenWord = [];
- let numBlanks = 0;
- let blanksAndSuccesses = [];
- let wrongGuesses = [];
+ class Gaming extends DomManipulator{
 
- var winCounter = 0;
- var lossCounter = 0;
- var numGuesses = 9;
-
-
- function startGame(){
-  numGuesses = 9;
-  chosenWord  = wordsList[Math.floor(Math.random() * wordsList.length)]
-
-  lettersInChosenWord = chosenWord.split("");
-  numBlanks = lettersInChosenWord.length
-
-  console.log(numGuesses);
-  console.log(numBlanks);
-  console.log(chosenWord);
-
-  for (var i = 0; i < numBlanks; i++) { blanksAndSuccesses.push('_') }
-  console.log(blanksAndSuccesses);
-
-  DomManipulator.gamePoint.innerHTML = numGuesses
-  
-  for (var i = 0; i < numBlanks; i++) {
-    
-    DomManipulator.cardArea.innerHTML = blanksAndSuccesses.map((e => ` <div class="card col-1" id="1"><h4>${e}</h4></div>`)).join(' ');
+  constructor(jsonData,jsonTitle) {
+    super()
+    this.jsonData = jsonData;
+    this.jsonTitle = jsonTitle;
   }
 
-}
 
-function checkLetters(letter) {
-  let letterInWord = false;
+  startGame =  () => {
+    randomize = Math.floor(Math.random() * this.jsonData.length);
+    choisenWord = this.jsonData [randomize]
+    choisenTitle = this.jsonTitle [randomize]
+    splitChoisenWord = choisenWord.split('')
+    lengthOfChoisenWord = splitChoisenWord.length;
+    mainVariable = [];
+    gameChanse = 3;
 
-  for (var i = 0; i < numBlanks; i++) {
-    if (chosenWord[i] == letter) {
-      letterInWord = true;
+    
+    for (let i = 0; i < lengthOfChoisenWord; i++)  mainVariable.push('-')
+
+
+    // Adding HTML PROSESS
+    DomManipulator.gameChanse.innerHTML = gameChanse;
+    DomManipulator.cardArea.innerHTML = mainVariable.map((e => ` <div class="card col-1" id="1"><h4>${e}</h4></div>`)).join(' ');
+    DomManipulator.hederBoxInfo.innerHTML = `<p>${choisenTitle}</p>`
+
+  }
+
+
+
+  checkUserOrder = userOrder => {
+      let letterInWord = false;
+
+      
+      for(let i = 0; i < lengthOfChoisenWord; i++){
+
+        if(choisenWord[i] === userOrder) {
+          letterInWord = true;
+        }
+      }
+      
+
+      if(letterInWord){
+
+        for(let n = 0; n < lengthOfChoisenWord; n++){
+          if(choisenWord[n] == userOrder) {
+            mainVariable[n] = userOrder;
+          }
+          document.getElementById(userOrder).disabled = true;
+        }
+
+      }else {
+
+       document.getElementById(userOrder).disabled = true;
+       gameChanse--;}
+
+  }
+  
+ 
+  roundEnd = () =>{
+    DomManipulator.gameChanse.innerHTML = gameChanse;
+    DomManipulator.cardArea.innerHTML = mainVariable.map((e => ` <div class="card col-1" id="1"><h4>${e}</h4></div>`)).join(' ');
+
+    if (splitChoisenWord.toString() === mainVariable.toString()) {
+      countOfWin++;
+      for(let i = 0; i < 35;i++)  DomManipulator.buttons[i].disabled = false;
+      this.startGame();
+    }else if (gameChanse === 0) {
+      for(let i = 0; i < 35;i++)  DomManipulator.buttons[i].disabled = false;
+      this.startGame();
     }
   }
-  
-  if (letterInWord) {
+  // edof class
+ }
+
+
+ 
+
+//  g.startGame();
+
+ clickButton = e => {
+  fetch('./data/letters.json')
+  .then((response) => response.json())
+  .then((data) =>{
+    let ConvertedDataLetter = [] ;
+    let ConvertedDataTitle = [] ;
+    for (let i = 0 ; i < data.length; i++) {
+      ConvertedDataLetter.push(data[i].letter.toLowerCase());
+      ConvertedDataTitle.push(data[i].title);
+    } 
+    let g = new Gaming(ConvertedDataLetter,ConvertedDataTitle);
+    let getButtonValue = e
+    g.checkUserOrder(getButtonValue);
+    g.roundEnd();
+  })
+
+ }
+ 
+
+ function speen() {
     
-    for (var b = 0; b < numBlanks; b++)
-    if (chosenWord[b] == letter) {
-      blanksAndSuccesses[b] = letter;
-    }
+  let deg = 0;
+  let zoneSize = 45; // deg
+ 
+  // Counter clockwise
+  const symbolSegments = {
+    1: 150,
+    2: 200,
+    3: 340,
+    4: 500,
+    5: 1200,
+    6: 700,
+    7: 20,
+    8: 1500,
   }
-
-  else{
-    wrongGuesses.push(letter);
-    numGuesses--;
+ 
+  const handleWin = (actualDeg) => {
+    const winningSymbolNr = Math.ceil(actualDeg / zoneSize);
+    gameEarndMoney += symbolSegments[winningSymbolNr];
+    DomManipulator.gameMoney.innerHTML = gameEarndMoney;
   }
-
-}
-
-function roundComplete(){
-  console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
-
-  DomManipulator.gamePoint.innerHTML = numGuesses;
-  DomManipulator.cardArea.innerHTML = blanksAndSuccesses.map((e => ` <div class="card col-1" id="1"><h4>${e}</h4></div>`)).join(' ');
-  if (lettersInChosenWord.toString() === blanksAndSuccesses.toString()) {
-    winCounter++
-    alert('yes you do');
-
-    startGame();
-  }else if (numGuesses === 0){
-    lossCounter++;
-    alert('lose you do');
-    startGame();
-  }
-}
-
-startGame();
-
-
-// Then initiate the function for capturing key clicks.
-document.onkeyup = function(event) {
-  // Converts all key clicks to lowercase letters.
-  var letterGuessed = String.fromCharCode(event.which).toLowerCase();
-  // Runs the code to check for correctness.
-  checkLetters(letterGuessed);
-  // Runs the code after each round is done.
-  roundComplete();
-};
-
- // function getRandomInt(value) {
- //   return Math.floor(Math.random() * value);
- // }
-
- //clickButton = id =>console.log(id);
-
-//  const hiddeCurrentValue =[];
-// //  const zz =   reply_click = clicked_id => {
-// //   // var n = ['a', 'b', 'c', 'd', 'e', 'f']
-// //   // for (let i = 0; i < 9; i++) {
-// //   //   if (clicked_id == data) {
-// //   //     console.log('yes');
-// //   //   }
-// //   // }
-  
-// // }
-
-
-// function getValueFromJson(data){
-//   const getRandomInt = value => Math.floor(Math.random() * value)
-//   const getRandom = getRandomInt(data.length)
-//   const choisenWords = data[getRandom].letter;
-//   const chLength = data[getRandom].letter.split('').length
-//   var choisenLetter = data[getRandom].letter.split('');
-  
-//   clickButton = (id) =>{
-//     for (let i = 0; i < chLength ; i++) {
-//       if (id === choisenLetter[i]) {
-
-//         console.log('yes');
-
-//       }
-//     }
-//     }
-//   for (let i = 0; i < chLength; i++) {
-//     hiddeCurrentValue.push("~");
-//   }
-  
-//   const choisenAciqlama = data[getRandom].aciqlama;
-//   DomManipulator.hederBoxInfo.innerHTML = choisenAciqlama;
-//   DomManipulator.cardArea.innerHTML = hiddeCurrentValue.map((element => `<div class="card col-1"><h4>${element}</h4></div>`)).join('')
-// }
-
-
-
-
-
-
-//  class MainGamingProses extends DomManipulator {
  
-//    constructor(data){
-//      super();
-//      this.data = data;
-//      }
+  DomManipulator.startButton.addEventListener('click', () => {
+    // Reset display
+    DomManipulator.display.innerHTML = "-";
+    // Disable button during spin
+    DomManipulator.startButton.style.pointerEvents = 'none';
+    // Calculate a new rotation between 5000 and 10 000
+    deg = Math.floor(5000 + Math.random() * 5000);
+    // Set the transition on the wheel
+    DomManipulator.wheel.style.transition = 'all 10s ease-out';
+    // Rotate the wheel
+    DomManipulator.wheel.style.transform = `rotate(${deg}deg)`;
+    // Apply the blur
+    DomManipulator.wheel.classList.add('blur');
+  });
+ 
+  DomManipulator.wheel.addEventListener('transitionend', () => {
+    // Remove blur
+    DomManipulator.wheel.classList.remove('blur');
+    // Enable button when spin is over
+    DomManipulator.startButton.style.pointerEvents = 'auto';
+    // Need to set transition to none as we want to rotate instantly
+    DomManipulator.wheel.style.transition = 'none';
+    // Calculate degree on a 360 degree basis to get the "natural" real rotation
+    // Important because we want to start the next spin from that one
+    // Use modulus to get the rest value
+    const actualDeg = deg % 360;
+    // Set the real rotation instantly without animation
+    DomManipulator.wheel.style.transform = `rotate(${actualDeg}deg)`;
+    // Calculate and display the winning symbol
+    handleWin(actualDeg);
+  });
+ }
 
-     
-
-//  }
-
-
-// const main = new MainGamingProses();
+  speen();
 
 
 
 
-
-
- 
- 
-//  let dd = document.querySelectorAll('.btn');
-//  for (let i = 0; i < dd.length; i++) {
-   
-//    //mm.push(dd[i].id);
-   
-//  }
- 
- // function main(data) {
- 
- //   function getRandomInt(value) {
- //     return Math.floor(Math.random() * value);
- //   }
- 
- 
- //   let getRandom = getRandomInt(data.length);
- //   let choisenLetter = data[getRandom].letter.split('');
- //   let choisenAciqlama = data[getRandom].aciqlama;
- //   DomManipulator.hederBoxInfo.innerHTML = choisenAciqlama;
- //   DomManipulator.cardArea.innerHTML = choisenLetter.map((element => `<div class="card col-1"><h4>${element}</h4></div>`)).join('')
- // }
- 
- 
-//  let b = []; 
- 
-//  let a = fetch('./data/letters.json')
-//  .then(res => res.json())
-//  .then(data => {
-   
-//    getValueFromJson(data);
-   
-//  })
-
- 
- 
- 
- // function Gaming(data){
- 
- //   var a = data.json();
- //   console.log(a);
- 
- 
- // }
- 
- // console.log(getJsonData);
- 
- // fetch('./data/letters.json')
- // .then(response => response.json())
- // .then(data => {
- //   let getRandom = getRandomInt(data.length);
- //   let choisenLetter = data[getRandom].letter.split('');
- //   let choisenAciqlama = data[getRandom].aciqlama;
- //   a.innerHTML = choisenAciqlama;
- //   dom.innerHTML = choisenLetter.map((element => `<div class="card col-1"><h4>${element}</h4></div>`)).join('')
- // })
- // .catch(err => alert(err))

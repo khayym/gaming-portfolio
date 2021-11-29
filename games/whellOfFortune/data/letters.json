@@ -1,26 +1,28 @@
 [
+ 
     {
         "letter": "ABASI",
-        "aciqlama": "Dördşahılıq (iyimiqəpiklik) metal pul"
+        "title": "Dördşahılıq (iyimiqəpiklik) metal pul"
     },
     {
         "letter": "ÖRTÜK",
-        "aciqlama": "Hər hansı bir şeyin üzərinə çəkilən, salınan parça."
+        "title": "Hər hansı bir şeyin üzərinə çəkilən, salınan parça."
     },
     {
         "letter": "TABUT",
-        "aciqlama": "Cənazəni qoymaq üçün iri qutu."
+        "title": "Cənazəni qoymaq üçün iri qutu."
     },
     {
         "letter": "EDAM",
-        "aciqlama": "Yüksək məhkəmə cəzası üsulu olaraq öldürmə; ölüm cəzası, dar ağacından asma."
+        "title": "Yüksək məhkəmə cəzası üsulu olaraq öldürmə; ölüm cəzası, dar ağacından asma."
     },
     {
         "letter": "XOXAN",
-        "aciqlama": "İfritə (adətən körpə uşaqları qorxutmaq üçün işlədilir "
+        "title": "İfritə (adətən körpə uşaqları qorxutmaq üçün işlədilir "
     },
     {
         "letter": "XONÇA",
-        "aciqlama": "Şirniyyat, meyvə və s. yeməli və ya başqa hədiyyələr qoyulmuş bəzəkli podnos, tabaq və s."
+        "title": "Şirniyyat, meyvə və s. yeməli və ya başqa hədiyyələr qoyulmuş bəzəkli podnos, tabaq və s."
     }
+    
 ]

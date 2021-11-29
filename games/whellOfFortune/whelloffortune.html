@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="/gaming-portfolio/style/css/style.css">
     <link rel="stylesheet" href="/gaming-portfolio/style/css/responcive.css">
     <link rel="stylesheet" href="/gaming-portfolio/games/whellOfFortune/style/style.css">
+    <link rel="stylesheet" href="/gaming-portfolio/games/whellOfFortune/spin-app/styles.css">
 </head>
+
 <body>
     
 
@@ -28,10 +30,10 @@
           <!-- game navbar start -->
         <ul class="navbar bg-white" id="game-navbar">
             <li class="nav-item">
-            <div class="btn badge-secondary"  ><p id="gameHurtCount" >12</p> &#10084;&#65039;</div>
+            <div class="btn badge-secondary"  ><p id="gameChanse" >12</p> &#10084;&#65039;</div>
             </li>
             <li class="nav-item">
-            <div class="btn badge-secondary">356 &#128181;</div>
+            <div class="btn badge-secondary" id="gameMoney">356 &#128181;</div>
             </li>
           </ul>
           <!-- game navbar ends -->
@@ -56,39 +58,53 @@
             <div class="card col-1" id="11"></div>
             <div class="card col-1" id="12"></div> -->
           </div>
-          </div>
+          </div>  
 
           <!-- alphabet choice -->
-          <div class="letter-block mt-5">
-            <div class="btn-group flex-wrap" role="group" aria-label="Basic mixed styles example" id="letterChoizeArea">
-              <!-- <button type="button" class="btn btn-danger" id="a" onclick="clickButton(this.id)">A</button>
+          <div class="letter-block mt-5" id="controllerArea">
+            <div class="btn-group flex-wrap" role="group" aria-label="Basic mixed styles example" id="letterChoiseArea">
+              <button type="button" class="btn btn-danger" id="a" onclick="clickButton(this.id)">A</button>
               <button type="button" class="btn btn-danger" id="b" onclick="clickButton(this.id)">B</button>
               <button type="button" class="btn btn-danger" id="c" onclick="clickButton(this.id)">C</button>
               <button type="button" class="btn btn-danger" id="d" onclick="clickButton(this.id)">D</button>
-              <button type="button" class="btn btn-danger" id="e" onclick="clickButton(this.id)">E</button> -->
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
-              <button type="button" class="btn btn-danger" id="xxxx">Left</button>
+              <button type="button" class="btn btn-danger" id="ç" onclick="clickButton(this.id)">Ç</button>
+              <button type="button" class="btn btn-danger" id="e" onclick="clickButton(this.id)">E</button>
+              <button type="button" class="btn btn-danger" id="ə" onclick="clickButton(this.id)">Ə</button>
+              <button type="button" class="btn btn-danger" id="f" onclick="clickButton(this.id)">F</button>
+              <button type="button" class="btn btn-danger" id="g" onclick="clickButton(this.id)">G</button>
+              <button type="button" class="btn btn-danger" id="ğ" onclick="clickButton(this.id)">Ğ</button>
+              <button type="button" class="btn btn-danger" id="h" onclick="clickButton(this.id)">H</button>
+              <button type="button" class="btn btn-danger" id="x" onclick="clickButton(this.id)">X</button>
+              <button type="button" class="btn btn-danger" id="ı" onclick="clickButton(this.id)">I</button>
+              <button type="button" class="btn btn-danger" id="i" onclick="clickButton(this.id)">İ</button>
+              <button type="button" class="btn btn-danger" id="j" onclick="clickButton(this.id)">J</button>
+              <button type="button" class="btn btn-danger" id="k" onclick="clickButton(this.id)">K</button>
+              <button type="button" class="btn btn-danger" id="q" onclick="clickButton(this.id)">Q</button>
+              <button type="button" class="btn btn-danger" id="l" onclick="clickButton(this.id)">L</button>
+              <button type="button" class="btn btn-danger" id="m" onclick="clickButton(this.id)">M</button>
+              <button type="button" class="btn btn-danger" id="n" onclick="clickButton(this.id)">N</button>
+              <button type="button" class="btn btn-danger" id="o" onclick="clickButton(this.id)">O</button>
+              <button type="button" class="btn btn-danger" id="ö" onclick="clickButton(this.id)">Ö</button>
+              <button type="button" class="btn btn-danger" id="p" onclick="clickButton(this.id)">P</button>
+              <button type="button" class="btn btn-danger" id="r" onclick="clickButton(this.id)">R</button>
+              <button type="button" class="btn btn-danger" id="s" onclick="clickButton(this.id)">S</button>
+              <button type="button" class="btn btn-danger" id="ş" onclick="clickButton(this.id)">Ş</button>
+              <button type="button" class="btn btn-danger" id="t" onclick="clickButton(this.id)">T</button>
+              <button type="button" class="btn btn-danger" id="u" onclick="clickButton(this.id)">U</button>
+              <button type="button" class="btn btn-danger" id="ü" onclick="clickButton(this.id)">Ü</button>
+              <button type="button" class="btn btn-danger" id="v" onclick="clickButton(this.id)">V</button>
+              <button type="button" class="btn btn-danger" id="y" onclick="clickButton(this.id)">Y</button>
+              <button type="button" class="btn btn-danger" id="z" onclick="clickButton(this.id)">Z</button>
+              <button type="button" class="btn btn-danger" id="w" onclick="clickButton(this.id)">Z</button>
             </div>
           </div>
+      </div>
+      <!-- spin app -->
+      <div id="app">
+        <img class="marker" src="./spin-app/marker.png" />
+        <img class="wheel" src="./spin-app/wheel.png"/>
+        <img class="button" src="./spin-app/button.png" />
+        <div class="display">-</div>
       </div>
     </div>  
 
