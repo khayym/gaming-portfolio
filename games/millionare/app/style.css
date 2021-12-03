@@ -1,7 +1,94 @@
-#money-pramid .h5{
-    border: 1px solid #fff !important;
-    border-radius: 10px;
-    font-size: 1.6rem;
+#money-pramid .h5 p{
+    /* margin: 0 30px 4px 8px; */
+    font-size: 1.5rem;
     color: rgb(236, 225, 71);
 }
 
+#money-pramid-price-block{
+  border: 1px solid rgb(170, 180, 29);
+  border-radius:20px
+}
+
+.styleingAnswers {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: #021442;
+    border: 1px solid #fff;
+  }
+  .styleingAnswers:after { 
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    left: -20px;
+    border-right: 20px solid#021442 ;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  .styleingAnswers:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid  #021442;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+
+  .styleingAnswers-forMain{
+      border: 1px solid white;
+      border-radius: 2rem;
+  }
+
+  .timer{
+      border: 1px solid #fff;
+      border-radius: 30rem!important;
+  }
+
+#timer-clock{
+  padding:2.1rem;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+}
+
+#answer-1{
+  color: #fff;
+}
+
+  /* .styleingAnswers-forMain {
+
+    width: auto;
+    height: auto;
+    position: flex;
+    background: wheat;
+  }
+  .styleingAnswers-forMain:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    left: -20px;
+    border-right: 20px solid rgb(252, 0, 0);
+    border-top: 90px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  .styleingAnswers-forMain:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid red;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  } */

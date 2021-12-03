@@ -4,7 +4,15 @@
         "answers": [
             "ansver1","ansver2","ansver3","ansver4"
         ],
-        "correct-ans": 2
+        "correct-answers": 2
+        
+    },
+    {
+        "question": "ssssss",
+        "answers": [
+            "ansver1","ansver2","ansver3","ansver4"
+        ],
+        "correct-answers": 1
         
     }
 ]
