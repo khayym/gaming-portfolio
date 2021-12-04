@@ -1,13 +1,9 @@
 #money-pramid .h5 p{
-    /* margin: 0 30px 4px 8px; */
+    margin: 0 30px 4px 8px;
     font-size: 1.5rem;
     color: rgb(236, 225, 71);
 }
 
-#money-pramid-price-block{
-  border: 1px solid rgb(170, 180, 29);
-  border-radius:20px
-}
 
 .styleingAnswers {
     width: 200px;
@@ -44,9 +40,16 @@
       border-radius: 2rem;
   }
 
+  #timer-block{
+
+  }
+
   .timer{
-      border: 1px solid #fff;
-      border-radius: 30rem!important;
+    border: 1px solid #fff;
+    font-size:5rem;
+    border-radius: 100px;
+    width:8rem;
+    color: #fff;
   }
 
 #timer-clock{
@@ -63,6 +66,19 @@
   color: #fff;
 }
 
+#modalBtn{
+  display: none;
+}
+
+/* .modal-content{
+
+} */
+
+
+/* 
+.btn:active{
+  background: red !important;
+} */
   /* .styleingAnswers-forMain {
 
     width: auto;

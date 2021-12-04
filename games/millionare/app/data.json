@@ -1,18 +1,66 @@
 [
     {
-        "question": "Blalalamaksksadasd",
+        "question": "Ikinci dunya muharibesi ne zaman baslayib",
         "answers": [
-            "ansver1","ansver2","ansver3","ansver4"
+            "1941","1939","1920","1955"
         ],
-        "correct-answers": 2
+        "correct_answers": 1
         
     },
     {
-        "question": "ssssss",
+        "question": "Hani rayon develeri ile meshurdur",
         "answers": [
-            "ansver1","ansver2","ansver3","ansver4"
+            "Sabran","Baki","Sumqayit","Qazax"
         ],
-        "correct-answers": 1
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "sdfdfsdfsfd",
+        "answers": [
+            "Sabran","Baki","Sumqayit","Qazax"
+        ],
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "1111111111111",
+        "answers": [
+            "Sabran","Baki","Sumqayit","Qazax"
+        ],
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "222222222222",
+        "answers": [
+            "Sabran","Baki","Sumqayit","Qazax"
+        ],
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "333333333333333",
+        "answers": [
+            "Sabran","Baki","Sumqayit","Qazax"
+        ],
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "44444444",
+        "answers": [
+            "Sabran","Baki","Sumqayit","Qazax"
+        ],
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "5555555555555555",
+        "answers": [
+            "Sabran","Baki","Sumqayit","Qazax"
+        ],
+        "correct_answers": 0
         
     }
 ]
