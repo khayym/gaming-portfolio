@@ -6,6 +6,10 @@
 
 
 
+.anime__details__content{
+
+
+}
 .styleingAnswers {
     width: 200px;
     height: 40px;
@@ -38,29 +42,36 @@
 
   .styleingAnswers-forMain{
       border: 1px solid white;
-      border-radius: 2rem;
+      border-radius: 2rem !important;
+      font-size: 1.4rem !important;
   }
 
-  #timer-block{
-
+  #questionDiv{
+    
   }
 
+.ans{
+  font-size: 1.12rem !important;
+  letter-spacing:1.4px !important;
+}
   .timer{
-    border: 1px solid #fff;
-    font-size:5rem;
-    border-radius: 100px;
-    width:8rem;
+    background-color: #021442;
+    border: 6px solid #064292;
+    font-size:4.3rem;
+    border-radius: 20rem;
+    width:7rem;
     color: #fff;
+
   }
 
 #timer-clock{
-  padding:2.1rem;
+  margin:4.1rem !important;
+  flex-direction: column-reverse !important;
   text-align: center;
   color: #fff;
   display: flex;
   align-items:center;
   justify-content: center;
-
 }
 
 #answer-1{
@@ -71,41 +82,38 @@
   display: none;
 }
 
-/* .modal-content{
+ /* #img-logo img{
+  max-width: 50% !important;
+}  */
 
-} */
+
+#fifty, #callJokerBTN{
+  border-radius: 20rem !important;
+}
 
 
-/* 
-.btn:active{
-  background: red !important;
-} */
-  /* .styleingAnswers-forMain {
 
-    width: auto;
-    height: auto;
-    position: flex;
-    background: wheat;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+  #img-logo{
+    display: none !important;
   }
-  .styleingAnswers-forMain:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    left: -20px;
-    border-right: 20px solid rgb(252, 0, 0);
-    border-top: 90px solid transparent;
-    border-bottom: 20px solid transparent;
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+
+  #img-logo{
+    display: none !important;
   }
-  .styleingAnswers-forMain:before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid red;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-  } */
+
+  #forrow{
+    flex-direction: column-reverse !important;
+  }
+
+}
+
+/* Small Device = 320px */
