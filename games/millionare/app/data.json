@@ -1,66 +1,186 @@
 [
     {
-        "question": "Ikinci dunya muharibesi ne zaman baslayib",
+        "question": "1903’te kadın mucit Mary Anderson tarafından geliştirilip patenti alınan otomobil parçası hangisidir?",
         "answers": [
-            "1941","1939","1920","1955"
-        ],
-        "correct_answers": 1
-        
-    },
-    {
-        "question": "Hani rayon develeri ile meshurdur",
-        "answers": [
-            "Sabran","Baki","Sumqayit","Qazax"
+            "Silecek","El freni","Dikiz aynası","Far"
         ],
         "correct_answers": 0
         
     },
     {
-        "question": "sdfdfsdfsfd",
+        "question": "İlk kez 1930 yılında ABD’de işe alınan kadın hosteslerde, havayolu şirketlerinin ön koşul olarak aradıkları meslek hangisiydi?",
         "answers": [
-            "Sabran","Baki","Sumqayit","Qazax"
+            "Garson","Tercüman","Manken","Hemşire"
         ],
-        "correct_answers": 0
+        "correct_answers": 3
         
-    },
+    }, 
     {
-        "question": "1111111111111",
+        "question": "İnanılması güç olan durumları yaşayan insanlar, bu kadarının sadece nerede olacağını söylerler?",
         "answers": [
-            "Sabran","Baki","Sumqayit","Qazax"
-        ],
-        "correct_answers": 1
-        
-    },
-    {
-        "question": "222222222222",
-        "answers": [
-            "Sabran","Baki","Sumqayit","Qazax"
-        ],
-        "correct_answers": 2
-        
-    },
-    {
-        "question": "333333333333333",
-        "answers": [
-            "Sabran","Baki","Sumqayit","Qazax"
+            "Karikatürlerde","Kitaplarda","Rüyalarda","Filmlerde"
         ],
         "correct_answers": 3
         
     },
     {
-        "question": "44444444",
+        "question": "Ev kadınlarını çalışma hayatına kazandırma amacıyla geliştirilen ve “Nobel Barış Ödülü” kazanan projenin adı nedir?",
         "answers": [
-            "Sabran","Baki","Sumqayit","Qazax"
+            "Spor kredi","Mikro kredi","Leasing","Factoring"
+        ],
+        "correct_answers": 1
+        
+    },
+    {
+        "question": "“Dolce Vita”, “Amarcord” ve “La Strada” filmlerinin yönetmeni kimdir?",
+        "answers": [
+            "Akira Kurosawa","Federico Fellini","Andrey Tarkovski","Bernardo Bertolucci"
+        ],
+        "correct_answers": 1
+        
+    },
+    {
+        "question": "Yakışıklılığı ve çapkınlığıyla bilinen efsanevi İspanyol halk kahramanı kimdir?",
+        "answers": [
+            "Raputin","Dr. Jivago","Cyrano de Bergerac","Don Juan"
+        ],
+        "correct_answers": 3
+        
+    },
+    {
+        "question": "Hollywood filmlerinde genellikle “lanet olası federaller” olarak ifade edilen, Amerikan soruşturma bürosunun kısaltması nedir?",
+        "answers": [
+            "NASA","FBI","KGB","IMF"
+        ],
+        "correct_answers": 1
+        
+    },
+    {
+        "question": "“Runik, Avesta, Braille” hangisinin türleridir?",
+        "answers": [
+            "Mutfak eşyası","Müzik aleti","Rüzgar","Alfabe"
+        ],
+        "correct_answers": 3
+        
+    },
+    {
+        "question": "Sert ve yoğun bir tadı olan, kahve fincanının yarısına kadar konularak servis edilen İtalyan kahvesinin adı nedir?",
+        "answers": [
+            "Mocha","Latte","Espresso","Cappuccino"
+        ],
+        "correct_answers": 2
+        
+    },
+    {
+        "question": "Hangisi aynı zamanda bir dini liderdir?",
+        "answers": [
+            "Ürdün Kralı","İspanya Kralı","Tayland Kralı","İngiltere Kraliçesi"
+        ],
+        "correct_answers": 3
+        
+    },
+    {
+        "question": "Paul McCartney, The Beatles’ın “A Day in the Life” şarkısının sonuna yerleştirdiği sesin sadece hangi hayvan tarafından duyulabileceğini söylemiştir?",
+        "answers": [
+            "Yarasa","Ayı","Köpek","Fare"
+        ],
+        "correct_answers": 2
+        
+    },
+    {
+        "question": "1941'de kocası Almanlar tarafından öldürülen Mariya Oktyabrskaya, her şeyini satıp “Savaşan Kız Arkadaş” adını verdiği hangi aracı alarak savaşa katılmıştır?",
+        "answers": [
+            "Savaş gemisi","Tank","Uçak","Denizaltı"
+        ],
+        "correct_answers": 1
+        
+    },
+    {
+        "question": "Geçtiğimiz günlerde ABD’de banka soyan 70 yaşında bir adam, paraları aldıktan sonra kaçmadan polislerin gelmesini bekleyip sorguda soygunu niçin yaptığını söylemiştir?",
+        "answers": [
+            "Haberlere çıkmak için","Arkadaş bulabilmek için","Kalacak yer bulmak için","Karısından kurtulmak için"
+        ],
+        "correct_answers": 3
+        
+    },
+    {
+        "question": "Oscar ödüllü yönetmen Steven Spielberg, yarım bıraktığı üniversite eğitimini 33 yıl sonra hangi filmi bitirme tezi olarak sunup tamamlamıştır?",
+        "answers": [
+            "Schindler'in Listesi","Er Ryan'ı Kurtarmak","Jaws","E.T."
         ],
         "correct_answers": 0
         
     },
     {
-        "question": "5555555555555555",
+        "question": "Apollo 11'in Ay’dan havalanmasını sağlayan şalter yanlışlıkla kırılınca Buzz Aldrin hangisini kırılan şalter yerine kullanıp mekiğin Ay’dan havalanmasını sağlamıştır?",
         "answers": [
-            "Sabran","Baki","Sumqayit","Qazax"
+            "Alyans","Diş fırçası","Tükenmez kalem","Saç tokası"
+        ],
+        "correct_answers": 2
+        
+    },
+    {
+        "question": "Albert Einstein 'Genel Görelilik Kuramı'nın yayımladığında New York Times gazetesi Einstein ile röportaj yapması için kimi yollamıştır?",
+        "answers": [
+            "Emlak muhabirini","Moda muhabirini","Ekonomi muhabirini","Golf muhabirini"
+        ],
+        "correct_answers": 3
+        
+    },
+    {
+        "question": "'Balyemez’, Osmanlı Devleti’nde hangi tür silaha verilen isimdir?",
+        "answers": [
+            "Balta","Kılıç","Topuz","Top"
+        ],
+        "correct_answers": 3
+        
+    },
+    {
+        "question": "Hangi ünlü kişinin beyni, ölümünden sonra incelenmek için 30.000'den fazla parçaya ayrılmıştır?",
+        "answers": [
+            "Albert Einstein","Vladimir Lenin","Winston Churchill","Nikola Tesla"
+        ],
+        "correct_answers": 1
+        
+    },
+    {
+        "question": "Adolphe Sax 1846'da tasarladığı müzik aleti saksafonun patentinin başvurusunda sunduğu saksafonu hangisinden üretmiştir?",
+        "answers": [
+            "Ahşap","Bakır","Cam","Seramik"
         ],
         "correct_answers": 0
+        
+    },
+    {
+        "question": "Hangi kuşun diğer adı “ebabil”dir?",
+        "answers": [
+            "Dağ kırlangıcı","Deniz kırlangıcı","Bataklık kırlangıcı","Çöl kırlangıcı"
+        ],
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "Hesap ödemek yerine ya bağış yapılan ya da gönüllü olarak çalışılan ABD’deki “Soul Kitchen” adlı restoran kime aittir?",
+        "answers": [
+            "Bono","Jon Bon Jovi","Keanu Reeves","Lady Gaga"
+        ],
+        "correct_answers": 1
+        
+    },
+    {
+        "question": "Bruce Lee, 1958'de Hong Kong’ta katıldığı hangi dans yarışmasında birinci olmuştur?",
+        "answers": [
+            "Çaça","Salsa","Twist","Tango"
+        ],
+        "correct_answers": 0
+        
+    },
+    {
+        "question": "1896'daki ilk modern Olimpiyat oyunlarında birinci olan sporculara ödül olarak hangisi verilmiştir?",
+        "answers": [
+            "Gümüş tepsi","Gümüş yüzük","Gümüş plaket","Gümüş madalya"
+        ],
+        "correct_answers": 1
         
     }
 ]

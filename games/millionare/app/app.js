@@ -38,6 +38,7 @@ class Gaming extends DomElements{
         answers = this.jsonData [randomNum].answers
         correctAnswer = this.jsonData [randomNum].correct_answers
 
+        console.log(correctAnswer);
         // Question Block
         DomElements.answerBlock[0].innerHTML = answers[0]
         DomElements.answerBlock[1].innerHTML = answers[1]
