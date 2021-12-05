@@ -5,18 +5,22 @@ let answers = [];
 let correctAnswer ;
 let nextQuestion = 0;
 let moneyPramid_count = 0;
-// let counter = 0;
-let interval
+
+
 
 class DomElements{
     static moneyPramid = $('#money-pramid')
     static answerBlock = $('.ans')
     static questionDiv = document.getElementById('questionDiv');
-    static lets_play = document.querySelector('#lets-play');
+    static fiftyButton  = document.querySelector('#fifty');
+    
+    // Sounds
+    static letsPlay = document.querySelector('#lets-play');
     static easy = document.querySelector('#easy');
     static wrong_answer = document.querySelector('#wrong-answer');
     static correct_answer = document.querySelector('#correct-answer');
 }
+
 
 
 class Gaming extends DomElements{
@@ -37,41 +41,24 @@ class Gaming extends DomElements{
         console.log(answers);
         console.log(correctAnswer);
 
-      
-
         // Question Block
         DomElements.answerBlock[0].innerHTML = answers[0]
         DomElements.answerBlock[1].innerHTML = answers[1]
         DomElements.answerBlock[2].innerHTML = answers[2]
         DomElements.answerBlock[3].innerHTML = answers[3]
         DomElements.questionDiv.innerHTML = data_Questions
-        
     }   
 
     
     
     loserEnd(){
-        document.querySelector('[data-target="#exampleModal"]').click()
+        $(`.ca_${correctAnswer}`).css('background','green')
+        Sounds.wrongAnswerSound();
+        setTimeout(()=>document.querySelector('[data-target="#exampleModal"]').click(),1500)
     }
-    
-    // timer(counter){
-    //     interval = setInterval(function() {
-    //     counter--;
-    //          if (counter <= 0) {
-    //              clearInterval(interval);
-    //              document.querySelector('[data-target="#exampleModal"]').click()
-    //         }else{
-    //              $('.timer').html(counter);
-    //              console.log("Timer --> " + counter);
-    //             }
-    //     }, 1000);
-    // }
 
-    // timerEnd(){
 
-    // }
-
-    checkUserOrder(buttonValue) {
+    checkUserOrder(buttonValue,e) {
         if(buttonValue == correctAnswer){
             moneyPramid_count++
             if(moneyPramid_count > 12){
@@ -86,13 +73,79 @@ class Gaming extends DomElements{
                     "background":"linear-gradient(27deg, rgba(135,126,56,1) 12%, rgba(138,138,51,1) 39%, rgba(203,184,34,1) 99%)"
                 });
                 this.dataConvert();
+                $(`#${e}`).css('background','#021442')
             }
         }
         else this.loserEnd();
     }
 
+}
 
 
+
+class Jokers extends Gaming{
+
+        
+    fifty(){
+        $('#fifty').attr('disabled' , true);
+
+        if(0 == correctAnswer ){
+            $(`.ca_1`).attr('disabled' , true);
+            $(`.ca_2`).attr('disabled' , true);
+        } else if(1 == correctAnswer){
+            $(`.ca_3`).attr('disabled' , true);
+            $(`.ca_2`).attr('disabled' , true);
+        } else if(2 == correctAnswer){
+            $(`.ca_0`).attr('disabled' , true);
+            $(`.ca_3`).attr('disabled' , true);
+        }else if(3 == correctAnswer){
+            $(`.ca_2`).attr('disabled' , true);
+            $(`.ca_0`).attr('disabled' , true);
+        }
+
+    }
+
+    fiftyDisable (){
+        $(`.ca_0`).attr('disabled' , false);
+        $(`.ca_1`).attr('disabled' , false);
+        $(`.ca_2`).attr('disabled' , false);
+        $(`.ca_3`).attr('disabled' , false);
+    }
+    
+    callFriend(){
+        $('#callJokerBTN').attr('disabled' , true);
+        $('#call-modal-p').html(`Einstein cavabın <b> <i> ${answers[correctAnswer]} </i></b> olduğunu düşünür`);
+        setTimeout(()=>document.querySelector('[data-target="#callFriendModal"]').click(),200)
+    }
+    
+}
+
+
+class Sounds extends Gaming{
+
+    startSound(){ 
+        DomElements.letsPlay.play();
+        DomElements.letsPlay.volume = 0.3;
+        setTimeout(()=>{
+            DomElements.easy.play();
+            DomElements.easy.volume =0.3;
+        },4000);
+    }
+
+   static wrongAnswerSound(){
+        DomElements.wrong_answer.play();
+        DomElements.wrong_answer.volume = 0.3;
+    }
+
+    correctAnswer(){
+        DomElements.correct_answer.play();
+        DomElements.correct_answer.volume = 0.3;
+    }
+
+    stop_startSound(){
+        DomElements.letsPlay.pause();
+        DomElements.easy.pause();
+    }
 
 }
 
@@ -102,16 +155,33 @@ class Gaming extends DomElements{
 fetch('/gaming-portfolio/games/millionare/app/data.json')
 .then(response => response.json())
 .then(data => {
-    let cls = new Gaming(data)
-    cls.dataConvert();
-    return cls
+    
+    let mainClass = new Gaming(data)
+
+    mainClass.dataConvert();
+    return mainClass
 })
-.then(z => {
+.then(allData => {
+    
+    const sound =  new Sounds();
+    const jokers = new Jokers();
+    sound.startSound();
+    
+    $(document).on('click','#fifty',()=> jokers.fifty());
+
+    $(document).on('click','#callJokerBTN',()=> jokers.callFriend());
+
+ 
+
     $(document).on('click','.ans',(e)=>{
-        setTimeout(()=>{
+        $(`#${e.target.id}`).css('background','#037888')
+        jokers.fiftyDisable()
+
+        setTimeout(()=>{   
             const buttonVal = e.target.value;
-            z.checkUserOrder(buttonVal);
-            // DomElements.lets_play.play();
+            sound.stop_startSound();
+            sound.correctAnswer()
+            allData.checkUserOrder(buttonVal,e.target.id);
         },1000)
     })
 })
@@ -120,6 +190,7 @@ fetch('/gaming-portfolio/games/millionare/app/data.json')
 function restartBtt(){
     window.location.reload();
 }
+
 
 
 
