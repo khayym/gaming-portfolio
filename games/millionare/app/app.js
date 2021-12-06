@@ -14,7 +14,7 @@ class DomElements{
     static moneyPramid = $('#money-pramid')
     static answerBlock = $('.ans')
     static questionDiv = document.getElementById('questionDiv');
-    static fiftyButton  = document.querySelector('#fifty');
+    static fiftyButton  = $('#fifty');
     static timer = document.querySelector('.timer');
     // Sounds
     static letsPlay = document.querySelector('#lets-play');
@@ -108,7 +108,7 @@ class Jokers extends Gaming{
 
         
     fifty(){
-        $('#fifty').attr('disabled' , true);
+        DomElements.fiftyButton.attr('disabled' , true);
 
         if(0 == correctAnswer ){
             $(`.ca_1`).attr('disabled' , true);
@@ -127,10 +127,7 @@ class Jokers extends Gaming{
     }
 
     fiftyDisable (){
-        $(`.ca_0`).attr('disabled' , false);
-        $(`.ca_1`).attr('disabled' , false);
-        $(`.ca_2`).attr('disabled' , false);
-        $(`.ca_3`).attr('disabled' , false);
+        for(var i=0; i<4 ; i++) $(`.ca_${i}`).attr('disabled' , false);
     }
     
     callFriend(){
@@ -138,6 +135,8 @@ class Jokers extends Gaming{
         $('#call-modal-p').html(`Einstein cavabın <b> <i> ${answers[correctAnswer]} </i></b> olduğunu düşünür`);
         setTimeout(()=>document.querySelector('[data-target="#callFriendModal"]').click(),200)
     }
+
+
 }
 
 
