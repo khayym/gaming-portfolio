@@ -3,11 +3,10 @@ class Dom {
     static  crystalBlue = document.querySelector('#crystalBlue');
     static  crystalPurple =document.querySelector('#crystalPurple');
     static  crystalGreen = document.querySelector('#crystalGreen');
-    static  winCount = document.querySelector('#winCount');
-    static  loseCOunt =document.querySelector('#loseCount')
+    static  winCount = $('#winCount');
+    static  loseCount = $('#loseCount')
 }
 
-console.log(Dom.crystalRed.value);
 let currentScore = 0;
 const crystal = {
     blue:
@@ -39,6 +38,7 @@ const crystal = {
     winCount = 0;
     targetScore = 0;
     currentScore = 0;
+    
     constructor(data){
         super(data);
         this.data = data;
@@ -48,7 +48,7 @@ const crystal = {
 
     targetCount  =() =>{
          this.targetScore = this.random(19,150);
-         $("#target-score").text(` target :${this.targetScore}`);
+         $("#target_scor").text(`${this.targetScore}`);
     }
 
     changeValue = () => {
@@ -58,50 +58,64 @@ const crystal = {
       this.targetCount();
       //bug fix here---
 
-        this.data.crystalRed.value = 22;
-        this.data.crystalGreen.value() = this.random(1, 12);
-        this.data.crystalGreen.value = this.random(1, 12);
-        this.data.Purple.value = this.random(1, 12);
+        this.data.blue.value = this.random(1,12);
+        this.data.green.value = this.random(1, 12);
+        this.data.red.value = this.random(1, 12);
+        this.data.yellow.value = this.random(1, 12);
 
-        Dom.win.text(`win --- ${this.winCount}`)
-        Dom.lose.text(`lose --- ${this.lossCount}`)
+        Dom.winCount.html(`win - ${this.winCount}`)
+        Dom.loseCount.text(`lose - ${this.lossCount}`)
         
         // bug fix here----
-        $("#your-score").text(`current: ${currentScore}`); 
+        $("#your_scor").text(`${currentScore}`); 
          // bug fix here----
 
     }
 
+
     currentCounter = (x) => {
-            if (currentScore === this.targetScore ) {
-                alert("winner");
-                this.winCount++;
-                this.changeValue();
-            }
-    
-            else if (currentScore >  this.targetScore){
-                alert('lose')
-                this.lossCount++;
-                this.changeValue();
-               
-            }
-          
-            else {
-                $("#your-score").text(`current: ${currentScore}`);        
-                currentScore += x.value 
-            }
+            
+        if (currentScore === this.targetScore ) {
+          alert("winner");
+          this.winCount++;
+          this.changeValue();
+        }
+
+        // (currentScore === this.targetScore)  ? winner() : (currentScore >  this.targetScore) ? loser() : otherVercion();
+          if (currentScore >  this.targetScore){
+            alert('lose')
+            this.lossCount++;
+            this.changeValue();
+            
+        }
+      
+        else {
+            $("#your_scor").text(`${currentScore}`);        
+            currentScore += x.value 
+        }
     }
+
+    leftPopup=() => {
+      
+      setTimeout(()=>{
+        $('#info_boy_img').css('left','1.7rem');
+      },3400);
     
+      setTimeout(()=>{
+        $('#info_boy_img').css('left','-100rem');
+      },10000);
+    
+    }
   }
 
 
+  let gameVariable = new Game(crystal);
+  gameVariable.targetCount();
+  gameVariable.changeValue();
+  gameVariable.leftPopup();
 
-  let g = new Game(crystal);
-  g.targetCount();
-  g.changeValue();
-
-  $(document).on('click', '#kirstal', () => g.currentCounter(crystal.blue))
-  $(document).on('click', '#sq', () => g.currentCounter(crystal.red))
-  $(document).on('click', '#kv', () => g.currentCounter(crystal.green))
-  $(document).on('click', '#kure', () => g.currentCounter(crystal.yellow))   
+  $(document).on('click', '#crystalRed', () => gameVariable.currentCounter(crystal.blue))
+  $(document).on('click', '#crystalBlue', () => gameVariable.currentCounter(crystal.red))
+  $(document).on('click', '#crystalPurple', () => gameVariable.currentCounter(crystal.green))
+  $(document).on('click', '#crystalGreen', () => gameVariable.currentCounter(crystal.yellow))   
  

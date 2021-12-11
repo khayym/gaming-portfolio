@@ -3,8 +3,13 @@
     background-image: url(./img/bg2.jpg);
     background-size: cover;
     opacity:88% ;
+    
 }
 
+.spad {
+    padding-top: 100px;
+    padding-bottom: 0px !important;
+}
 #crys-1{
     width: 3.9rem;
     height: 3.9rem;
@@ -14,11 +19,11 @@ button[data-styl='cristal_icons']{
     border-radius: 0.6rem;
 }
 .anime__details__content{
-    border: 2px solid rgba(243, 237, 237, 0.308);
+    border: 3px solid rgba(35, 60, 141, 0.308);
     border-radius:10px;
-    box-shadow: 1px -8px 96px 25px rgba(243, 237, 237, 0.308);
-    -webkit-box-shadow: 1px -8px 96px 25px rgba(243, 237, 237, 0.308);
-    -moz-box-shadow: 1px -8px 96px 25px rgba(243, 237, 237, 0.308);
+    box-shadow: 1px -8px 96px 25px rgba(35, 60, 141, 0.308);
+    -webkit-box-shadow: 1px -8px 96px 25px rgba(35, 60, 141, 0.308);
+    -moz-box-shadow: 1px -8px 96px 25px rgba(35, 60, 141, 0.308);
 }
 
 #target-p{
@@ -46,4 +51,13 @@ button[data-styl='but-2']{
 
 .heading{
     border-bottom: 2px solid rgba(0, 0, 0, 0.247) !important;
+}
+
+#info_boy_img{
+    position:fixed;
+    top:15%;
+    left: -100rem;
+    visibility:visible;
+    transition: all 0.9s;
+    z-index: 9999;
 }

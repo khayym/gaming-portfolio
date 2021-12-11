@@ -81,6 +81,10 @@ ol {
 /*---------------------
   Helper CSS
 -----------------------*/
+[data-setbg] img{
+	border-radius: 1rem !important;
+	border: 1px solid #13178a60;
+}
 
 .section-title {
 	margin-bottom: 30px;
