@@ -1,0 +1,49 @@
+#game-center{
+    height:38rem !important;
+    background-image: url(./img/bg2.jpg);
+    background-size: cover;
+    opacity:88% ;
+}
+
+#crys-1{
+    width: 3.9rem;
+    height: 3.9rem;
+}
+
+button[data-styl='cristal_icons']{
+    border-radius: 0.6rem;
+}
+.anime__details__content{
+    border: 2px solid rgba(243, 237, 237, 0.308);
+    border-radius:10px;
+    box-shadow: 1px -8px 96px 25px rgba(243, 237, 237, 0.308);
+    -webkit-box-shadow: 1px -8px 96px 25px rgba(243, 237, 237, 0.308);
+    -moz-box-shadow: 1px -8px 96px 25px rgba(243, 237, 237, 0.308);
+}
+
+#target-p{
+    font-size:2.5rem;
+}
+
+button[data-styl='but-1']{
+    border-radius: 0.6rem!important;
+    border: 0px solid #000;
+    font-size:5rem;
+    background: rgb(213,158,220);
+    background: linear-gradient(30deg, rgba(213,158,220,0.38728995015975143) 32%, rgba(25,39,54,0.31726193895526966) 97%);
+}
+button[data-styl='but-2']{
+    border-radius: 0.6rem!important;
+    border: 0px solid #000;
+    font-size:5rem;
+    background: rgb(109,144,163);
+    background: linear-gradient(30deg, rgba(109,144,163,1) 32%, rgba(43,58,79,1) 97%);
+}
+
+#modalBtn{
+    visibility:hidden;
+}
+
+.heading{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.247) !important;
+}
